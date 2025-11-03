@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+  </head>
+  <body>
+    <h2>Student Registration Form</h2>
+    <form action="https://newerp.kluniversity.in">
+    <h3>Personal Information</h3>
+    <form>
+      <label for="fn">Full Name:</label> 
+      <input type="text" required> <br>
+      <label for="gn">Gender:</label>
+      <input type="radio" name="gn" value="m" />Male
+      <input type="radio" name="gn" value="f" />Female <br>
+      <label for="em">Email:</label>
+      <input type="email" required><br>
+      <label for="cn">Contact:</label> 
+      <input type="tel"pattern=[0-9][10] required><br>
+      <label for="dob">Date of Birth: </label>
+      <input type="date" required><br>
+      <label for="adr">Address:</label>
+      <textarea rows="4"></textarea>
+      <h3>Academic Details</h3>
+      <label>Branch:</label>
+      <select>
+        <option value="">--select--</option>
+        <option value="CSE">Computer Science Engineering</option>
+        <option value="ECE">Electronic Communication Engineering</option>
+        <option value="EEE">Electrical Engineering</option>
+        <option value="ME">Mechanical Engineering</option>
+      </select><br>
+      Languages known:<br>
+                       <input type="checkbox" name="cb" value="tel">Telugu<br>
+                       <input type="checkbox" name="cb" value="hin">Hindi<br>
+                       <input type="checkbox" name="cb" value="eng">English<br>
+                       <input type="checkbox" name="cb" value="tam">Tamil<br>
+
+                       Upload Resume: 
+                       <input type="file"><br>
+                       <button>Submit</button>
+
+    </form>
+  </body>
+</html>
+
+
+

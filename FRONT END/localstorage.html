@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h2>Welcome Page</h2>
+    <input type="text" id="username" placeholder="Enter Your Name">
+    <button onclick="saveName()">Save Name</button>
+    <p id="greeting"></p>
+
+    <script>
+        function saveName() {
+            let name = document.getElementById("username").value.trim();
+            if (name === "") {
+                alert("Please Enter Your Name!");
+                return;
+            }
+            // Save to localStorage
+            localStorage.setItem("username", name);
+            document.getElementById("greeting").textContent = "Hello, " + name;
+        }
+
+        // Optional: Auto-greet if name is already stored
+        window.onload = function() {
+            let storedName = localStorage.getItem("username");
+            if (storedName) {
+                document.getElementById("greeting").textContent = "Hello, " + storedName;
+            }
+        };
+    </script>
+</body>
+</html>
